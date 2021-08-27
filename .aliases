@@ -1,0 +1,5 @@
+# エイリアスの設定
+# ls（カラー表示）
+alias ls="ls -G"
+alias ll="ls -lGa"
+alias la="ls -laG"
