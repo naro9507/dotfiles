@@ -32,8 +32,12 @@ zplug "chrissicool/zsh-256color"
 
 # コマンド入力途中で上下キー押したときの過去履歴がいい感じに出るようになる
 zplug "zsh-users/zsh-history-substring-search"
+
 # 過去に入力したコマンドの履歴が灰色のサジェストで出る
 zplug "zsh-users/zsh-autosuggestions"
+
+# Prompt Theme powerlevel10k
+zplug romkatv/powerlevel10k, as:theme, depth:1
 
 # 自身をプラグインとして管理する
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'

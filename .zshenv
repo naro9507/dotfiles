@@ -26,6 +26,7 @@ SAVEHIST=10000
 export GOPATH=$HOME/.anyenv/envs/goenv/shims/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
+export PATH="$HOME/.anyenv/envs/nodenv/bin:$PATH"
 
 #######################################
 # anyenv                              #

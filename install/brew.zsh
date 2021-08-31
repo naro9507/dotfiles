@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
 formulas=(
     anyenv
     autoconf
@@ -17,7 +19,6 @@ formulas=(
     coreutils
     jemalloc
     postgresql
-    docker
     krb5
     kubectx
     readline
@@ -54,6 +55,11 @@ formulas=(
     awscli
     jq
     peco
+    gibo
+    kube-ps1
+    lazydocker
+    docker
+    lazygit
 )
 
 cask_formulas=(
@@ -76,6 +82,9 @@ cask_formulas=(
     karabiner-elements
     alfred
     spotify
+    monitorcontrol
+    shiftit
+    wireshark
 )
 
 brew upgrade
