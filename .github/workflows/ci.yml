@@ -9,5 +9,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Install dotfiles
-        run: ./install.zsh
-        shell: zsh {0}
+        run: |
+          export SHELL="/bin/zsh"
+          exec $SHELL -l
+          ./install.zsh
