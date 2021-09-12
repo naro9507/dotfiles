@@ -22,6 +22,7 @@ email = naohiro.7.vfh@gmail.com
 
 [alias]
        log-g = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
+       amend = commit --amend
        branch-d = !git branch -D $(git branch | fzf)
        checkout-b = !git checkout $(git branch | fzf)
        checkout-rb = !git checkout -b $(git branch | fzf)
