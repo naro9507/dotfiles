@@ -7,13 +7,8 @@ email = naohiro.7.vfh@gmail.com
 [core]
 	excludesfile = ~/.gitignore_global
 
-[alias]
-       st = status
-       logg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
-       cm = commit
-       df = diff
-       dfs = diff --staged
-
+[fetch]
+       prune = true
 
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
@@ -21,3 +16,9 @@ email = naohiro.7.vfh@gmail.com
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+
+[alias]
+       log-g = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
+       branch-d = !git branch -D $(git branch | fzf)
+       checkout-b = !git checkout $(git branch | fzf)
+       checkout-rb = !git checkout -b

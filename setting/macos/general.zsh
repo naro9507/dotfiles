@@ -91,3 +91,5 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bo
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "Asia/Tokyo" > /dev/null
 
+# Fn常にON
+defaults write com.apple.keyboard.fnState -bool true

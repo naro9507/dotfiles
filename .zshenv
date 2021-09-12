@@ -32,3 +32,6 @@ export PATH="$HOME/.anyenv/envs/nodenv/bin:$PATH"
 # anyenv                              #
 #######################################
 export PATH="$HOME/.anyenv/bin:$PATH"
+
+export CLOUDSDK_PYTHON_SITEPACKAGES=1
+

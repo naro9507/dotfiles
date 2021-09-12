@@ -46,7 +46,10 @@ formulas=(
     gnutls
     libunistring
     go
+    ghq
     m4
+    zsh-syntax-highlighting
+    zsh-history-substring-search
     golangci-lint
     mpdecimal
     grep
@@ -60,6 +63,7 @@ formulas=(
     lazydocker
     docker
     lazygit
+    google-cloud-sdk
 )
 
 cask_formulas=(
@@ -85,6 +89,7 @@ cask_formulas=(
     monitorcontrol
     shiftit
     wireshark
+    1password
 )
 
 brew upgrade

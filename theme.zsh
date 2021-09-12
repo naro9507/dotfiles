@@ -1,3 +1,5 @@
+# Not Used
+
 #!/bin/zsh
 
 autoload -U colors; colors

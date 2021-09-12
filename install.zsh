@@ -17,16 +17,16 @@ function create_homedir_symlink() {
     return
   fi
 
-  ln -siv $basepath $outpath
+  ln -sfv $basepath $outpath
 }
 
 files=(
-  .aliases
   .gitconfig
   .gitconfig_global
   .zshrc
   .zshenv
-  theme.zsh
+  aliases.zsh
+  zplug.zsh
 )
 
 # zsh sym link files
