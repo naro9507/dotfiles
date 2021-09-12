@@ -10,6 +10,9 @@ email = naohiro.7.vfh@gmail.com
 [fetch]
        prune = true
 
+[push]
+	default = current
+
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 
@@ -21,4 +24,4 @@ email = naohiro.7.vfh@gmail.com
        log-g = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
        branch-d = !git branch -D $(git branch | fzf)
        checkout-b = !git checkout $(git branch | fzf)
-       checkout-rb = !git checkout -b
+       checkout-rb = !git checkout -b $(git branch | fzf)
