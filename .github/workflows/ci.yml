@@ -10,4 +10,4 @@ jobs:
         uses: actions/checkout@v2
       - name: Install dotfiles
         run: ./install.zsh
-        shell: zsh
+        shell: zsh {0}
