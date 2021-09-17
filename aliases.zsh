@@ -12,7 +12,7 @@ alias la="ls -laG"
 # Git
 alias lzg='lazygit'
 alias kusa='curl https://github-contributions-api.deno.dev/$(git config user.name).term'
-alias gfpo='git push --force-with-lease origin'
+alias gfp='git push --force-with-lease origin'
 alias gbdl='git branch -D $(fzf-git-branch-local)'
 alias gbda='git fetch --prune ( git fetch -p )'
 alias gclone='ghq get $1'
