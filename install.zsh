@@ -29,6 +29,7 @@ files=(
   .zshenv
   aliases.zsh
   zplug.zsh
+  functions.zsh
 )
 
 # zsh sym link files

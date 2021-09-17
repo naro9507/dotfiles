@@ -7,8 +7,11 @@ fi
 
 #!/bin/zsh
 
-# .zshrc
+# .zshenv
 source ${HOME}/.zshenv
+
+# Load functions
+source $HOME/functions.zsh
 
 # Load aliases
 source $HOME/aliases.zsh

@@ -21,17 +21,22 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 #######################################
-# golang Settings                     #
-#######################################
-export GOPATH=$HOME/.anyenv/envs/goenv/shims/go
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:/usr/local/go/bin
-export PATH="$HOME/.anyenv/envs/nodenv/bin:$PATH"
-
-#######################################
 # anyenv                              #
 #######################################
-export PATH="$HOME/.anyenv/bin:$PATH"
+export PATH=$HOME/.anyenv/bin:$PATH
+
+#######################################
+# Golang Settings                     #
+#######################################
+export GOENV_ROOT=$HOME/.anyenv/envs/.goenv
+export PATH=$GOENV_ROOT/bin:$PATH
+export PATH=$GOROOT/bin:$PATH
+export PATH=$PATH:$GOPATH/bin
+
+#######################################
+# Node Settings                     #
+#######################################
+export PATH=$HOME/.anyenv/envs/nodenv/bin:$PATH
 
 export CLOUDSDK_PYTHON_SITEPACKAGES=1
 

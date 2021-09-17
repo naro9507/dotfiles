@@ -45,7 +45,6 @@ formulas=(
     xz
     gnutls
     libunistring
-    go
     ghq
     m4
     zsh-syntax-highlighting
