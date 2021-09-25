@@ -29,9 +29,9 @@ alias cdgr='cd-gitroot'
 
 # Git Flow
 alias gffs='git flow feature start $1'
-alias gfff='git flow feature finish $(git branch | grep "feature" | fzf | awk "{print \$2}")'
+alias gfff='git flow feature finish $(git branch | grep "feature" | fzf | awk "{print \$2}") | sed "s/feature\///")'
 alias gfhs='git flow hotfix start $1'
-alias gfhf='git flow hotfix finish '
+alias gfhf='git flow hotfix finish $(git branch | grep "hotfix" | fzf | awk "{print \$2}" | sed "s/hotfix\///")'
 
 # docker
 alias lzd='lazydocker'
