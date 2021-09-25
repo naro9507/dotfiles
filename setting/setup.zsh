@@ -11,7 +11,7 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-for dir in $(\ls -F | grep setting/ | awk '{print substr($0, 1, length($0)-1)}'); do
+for dir in $(\find ./setting/** -type d); do
     for file in $(\find ./${dir} -name \*.zsh); do
         $file
     done
