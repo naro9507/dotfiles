@@ -49,6 +49,8 @@ fi
 # ZSH_THEME="powerlevel10k/powerlevel10k"
 
 pwd=$(pwd)
+# symbolic link for vscode settings.json
+ln -sfv ${pwd}/setting/vscode/settings.json ${HOME}/Library/Application\ Support/Code/User/settings.json
 
 # install tools
 for file in $(\find $pwd/install -name \*.zsh); do

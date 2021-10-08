@@ -7,7 +7,6 @@ extensions=(
     benjaminadk.emojis4git
     christian-kohler.npm-intellisense
     chrmarti.regex
-    CoenraadS.bracket-pair-colorizer
     dbaeumer.vscode-eslint
     donjayamanne.githistory
     dsznajder.es7-react-js-snippets
@@ -30,14 +29,11 @@ extensions=(
     lkytal.FlatUI
     mhutchie.git-graph
     ms-azuretools.vscode-docker
-    MS-CEINTL.vscode-language-pack-ja
     ms-vscode-remote.remote-containers
     ms-vscode-remote.remote-ssh
     ms-vscode-remote.remote-ssh-edit
-    ms-vscode-remote.remote-wsl
     ms-vscode-remote.vscode-remote-extensionpack
     msjsdiag.debugger-for-chrome
-    p1c2u.docker-compose
     PKief.material-icon-theme
     ritwickdey.LiveServer
     rogalmic.bash-debug
@@ -49,6 +45,7 @@ extensions=(
     wayou.vscode-todo-highlight
     xabikos.ReactSnippets
     yzhang.markdown-all-in-one
+    sozercan.slack
 )
 
 for extension in ${extensions[@]}; do

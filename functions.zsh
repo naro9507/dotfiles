@@ -41,6 +41,31 @@ fzf-git-branch-local() {
         sed "s/.* //"
 }
 
+fzf-git-multi-branch-local() {
+    git branch --color=always --sort=-committerdate |
+        grep -v HEAD |
+        fzf --height 50% --ansi --multi --preview-window right:65% \
+            --preview 'git log -n 50 --color=always --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed "s/.* //" <<< {})' |
+        sed "s/.* //"
+}
+
+fzf-git-branch-delete-local() {
+    local branches
+
+    branches=$(fzf-git-multi-branch-local)
+
+    if [[ "$branches" = "" ]]; then
+        echo "No branches selected."
+        return
+    fi
+
+    for branch in $branches; do
+        echo $branch
+        git branch -D ${branch}
+    done
+
+}
+
 fzf-git-checkout-local() {
     local branch
 

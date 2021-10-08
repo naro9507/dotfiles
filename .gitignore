@@ -1,2 +1,3 @@
 **/convert_data/config.example.env
 **/convert_data/convert.sh
+.history/**
