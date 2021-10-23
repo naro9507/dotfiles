@@ -89,6 +89,7 @@ cask_formulas=(
     shiftit
     wireshark
     1password
+    kindle
 )
 
 brew upgrade

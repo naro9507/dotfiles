@@ -46,6 +46,8 @@ extensions=(
     xabikos.ReactSnippets
     yzhang.markdown-all-in-one
     sozercan.slack
+    oderwat.indent-rainbow
+    xyz.local-history
 )
 
 for extension in ${extensions[@]}; do

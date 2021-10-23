@@ -15,6 +15,7 @@ fzf-git-branch-all() {
 }
 
 fzf-git-checkout() {
+    git fetch
     local branch
 
     branch=$(fzf-git-branch-all)

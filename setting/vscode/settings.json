@@ -1,8 +1,14 @@
 {
-    "editor.bracketPairColorization.enabled": true,
-    "workbench.colorTheme": "FlatUI Dark",
-    "workbench.iconTheme": "material-icon-theme",
-    "tabnine.experimentalAutoImports": true,
-    "GitLive.Issue tracker integration": "Disabled",
-    "terminal.integrated.fontFamily": "MesloLGS NF"
+  "editor.formatOnSave": true,
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
+  "editor.formatOnType": true,
+  "editor.bracketPairColorization.enabled": true,
+  "workbench.colorTheme": "FlatUI Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "tabnine.experimentalAutoImports": true,
+  "GitLive.Issue tracker integration": "Disabled",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

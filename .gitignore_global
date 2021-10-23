@@ -22,3 +22,6 @@ vendor/
 # VSCode
 .vscode
 
+# VSCode extensions
+## xyz.local-history
+**/.history/**

@@ -25,6 +25,8 @@ function create_homedir_symlink() {
 files=(
   .gitconfig
   .gitconfig_global
+  .gitignore
+  .gitignore_global
   .zshrc
   .zshenv
   aliases.zsh
