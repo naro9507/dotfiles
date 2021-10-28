@@ -53,7 +53,7 @@ fzf-git-multi-branch-local() {
 fzf-git-branch-delete-local() {
     local branches
 
-    branches=$(fzf-git-multi-branch-local)
+    branches=($(fzf-git-multi-branch-local))
 
     if [[ "$branches" = "" ]]; then
         echo "No branches selected."
@@ -61,8 +61,7 @@ fzf-git-branch-delete-local() {
     fi
 
     for branch in $branches; do
-        echo $branch
-        git branch -D ${branch}
+        git branch -D $branch
     done
 
 }
@@ -83,3 +82,4 @@ fzf-git-checkout-local() {
         git checkout -b $1 $branch
     fi
 }
+
