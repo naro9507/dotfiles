@@ -24,6 +24,7 @@ alias gadd='cdgr && git add $(git diff --name-status | fzf --multi | awk "{print
 alias gdis='cdgr && git checkout $(git diff --name-status | fzf --multi | awk "{print \$2}")'
 alias gsl='git stash --list'
 alias repo='ghq list -p'
+alias repog='ghq get $1'
 alias repoc='cd "$(repo | fzf)"'
 alias cdgr='cd-gitroot'
 

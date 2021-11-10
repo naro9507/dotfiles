@@ -48,6 +48,8 @@ extensions=(
     sozercan.slack
     oderwat.indent-rainbow
     xyz.local-history
+    cschleiden.vscode-github-actions
+    timonwong.shellcheck
 )
 
 for extension in ${extensions[@]}; do

@@ -54,6 +54,11 @@ pwd=$(pwd)
 # symbolic link for vscode settings.json
 ln -sfv ${pwd}/setting/vscode/settings.json ${HOME}/Library/Application\ Support/Code/User/settings.json
 
+# command
+for file in $(\find $pwd/install -name \*.zsh); do
+  echo $file
+done
+
 # install tools
 for file in $(\find $pwd/install -name \*.zsh); do
   $file
