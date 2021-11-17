@@ -14,7 +14,7 @@ alias lzg='lazygit'
 alias kusa='curl https://github-contributions-api.deno.dev/$(git config user.name).term'
 alias gfp='git push --force-with-lease origin'
 alias gbrl='fzf-git-branch-delete-local'
-alias gbrr='git push --delete origin $(git branch -a | grep "remotes\/origin" | fzf | awk "{print \$2}" | sed "s/remotes\/origin\///")'
+alias gbrr='git push -f origin :$(git branch -a | grep "remotes\/origin" | fzf | awk "{print \$2}" | sed "s/remotes\/origin\///")'
 alias gbra='git fetch --prune ( git fetch -p )'
 alias gclone='ghq get $1'
 alias gbs='fzf-git-checkout-local'
@@ -30,10 +30,12 @@ alias cdgr='cd-gitroot'
 
 
 # Git Flow
-alias gffs='git flow feature start $1'
+alias gffs='git pull origin develop && git flow feature start $1'
 alias gfff='git flow feature finish $(git branch | grep "feature" | fzf | awk "{print \$2}") | sed "s/feature\///")'
-alias gfhs='git flow hotfix start $1'
+alias gfhs='git pull origin master && git flow hotfix start $1'
 alias gfhf='git flow hotfix finish $(git branch | grep "hotfix" | fzf | awk "{print \$2}" | sed "s/hotfix\///")'
+alias gfrs='git pull origin develop && git flow release start $1'
+alias gfrf='git pull origin master && git pull origin develop && git flow release finish $(git branch | grep "release" | fzf | awk "{print \$2}" | sed "s/release\///")'
 
 # docker
 alias lzd='lazydocker'

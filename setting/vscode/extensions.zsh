@@ -50,6 +50,9 @@ extensions=(
     xyz.local-history
     cschleiden.vscode-github-actions
     timonwong.shellcheck
+    mtxr.sqltools
+    mtxr.sqltools-driver-mysql
+    mtxr.sqltools-driver-pg
 )
 
 for extension in ${extensions[@]}; do
