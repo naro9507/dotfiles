@@ -11,5 +11,3 @@ anyenv install nodenv
 anyenv install goenv
 anyenv install pyenv
 anyenv update
-
-

@@ -20,7 +20,7 @@ vendor/
 
 
 # VSCode
-.vscode
+.vscode/**
 
 # VSCode extensions
 ## xyz.local-history

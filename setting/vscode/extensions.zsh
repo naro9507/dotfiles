@@ -53,6 +53,9 @@ extensions=(
     mtxr.sqltools
     mtxr.sqltools-driver-mysql
     mtxr.sqltools-driver-pg
+    zxh404.vscode-proto3
+    EditorConfig.EditorConfig
+    GraphQL.vscode-graphql
 )
 
 for extension in ${extensions[@]}; do
