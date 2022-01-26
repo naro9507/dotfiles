@@ -63,6 +63,7 @@ formulas=(
     docker
     lazygit
     google-cloud-sdk
+    gdb
 )
 
 cask_formulas=(
@@ -90,6 +91,7 @@ cask_formulas=(
     wireshark
     1password
     kindle
+    biscuit
 )
 
 brew upgrade

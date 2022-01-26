@@ -18,5 +18,26 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "shellcheck.ignorePatterns": {
     "**/*.zsh": "false"
-  }
+  },
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "gitlens.advanced.messages": {
+    "suppressGitMissingWarning": true
+  },
+  "workbench.editorAssociations": {
+    "*.bin": "default"
+  },
+  "files.autoGuessEncoding": true,
+  "go.useLanguageServer": true,
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    // Optional: Disable snippets, as they conflict with completion ranking.
+    "editor.snippetSuggestions": "none"
+  },
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": ["--config=${workspaceFolder}/.golangci.yaml"]
 }

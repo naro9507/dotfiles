@@ -56,6 +56,9 @@ extensions=(
     zxh404.vscode-proto3
     EditorConfig.EditorConfig
     GraphQL.vscode-graphql
+    stylelint.vscode-stylelint
+    ms-vscode.cpptools
+    slevesque.vscode-hexdump
 )
 
 for extension in ${extensions[@]}; do
