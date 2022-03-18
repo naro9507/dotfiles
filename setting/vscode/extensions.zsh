@@ -49,7 +49,6 @@ extensions=(
     oderwat.indent-rainbow
     xyz.local-history
     cschleiden.vscode-github-actions
-    timonwong.shellcheck
     mtxr.sqltools
     mtxr.sqltools-driver-mysql
     mtxr.sqltools-driver-pg

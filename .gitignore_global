@@ -25,3 +25,5 @@ vendor/
 # VSCode extensions
 ## xyz.local-history
 **/.history/**
+
+**/convert_data/**/*

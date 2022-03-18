@@ -76,7 +76,6 @@ fzf-git-checkout-local() {
     fi
 
     git checkout $branch
-    git pull
 
     if [[ $1 ]]; then
         git checkout -b $1 $branch

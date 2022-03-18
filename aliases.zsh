@@ -3,6 +3,7 @@ alias reload='exec ${SHELL} -l'
 alias history='anyframe-widget-put-history'
 alias calc='function __calc(){ echo "$1" | bc }; __calc'
 alias gunzip='gzip -dv $(find $HOME/Downloads -name \*.gz -or -name \*.gzip | fzf) | echo '
+alias pkill='kill -9 $(lsof -t -i:$1)'
 
 # ls（カラー表示）
 alias ls="ls -G"

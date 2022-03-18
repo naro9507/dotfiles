@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 formulas=(
     anyenv
@@ -64,6 +64,7 @@ formulas=(
     lazygit
     google-cloud-sdk
     gdb
+    libpq
 )
 
 cask_formulas=(
