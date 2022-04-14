@@ -1,6 +1,6 @@
 # General
 alias reload='exec ${SHELL} -l'
-alias history='anyframe-widget-put-history'
+alias history='fzf-history'
 alias calc='function __calc(){ echo "$1" | bc }; __calc'
 alias gunzip='gzip -dv $(find $HOME/Downloads -name \*.gz -or -name \*.gzip | fzf) | echo '
 alias pkill='kill -9 $(lsof -t -i :$1)'
@@ -12,22 +12,19 @@ alias la="ls -laG"
 
 # Git
 alias lzg='lazygit'
+alias cb='git-current-branch-name'
 alias kusa='curl https://github-contributions-api.deno.dev/$(git config user.name).term'
 alias gfp='git push --force-with-lease origin'
 alias gbrl='fzf-git-branch-delete-local'
 alias gbra='git fetch --prune ( git fetch -p )'
 alias gclone='ghq get $1'
-alias gbs='fzf-git-checkout-local'
 alias gbcl='fzf-git-checkout-local'
 alias gbcr='fzf-git-checkout'
-alias gadd='cdgr && git add $(git diff --name-status | fzf --multi | awk "{print \$2}")'
-alias gdis='cdgr && git checkout $(git diff --name-status | fzf --multi | awk "{print \$2}")'
 alias gsl='git stash --list'
 alias repo='ghq list -p'
 alias repog='ghq get $1'
 alias repoc='cd "$(repo | fzf)"'
 alias cdgr='cd-gitroot'
-
 
 # Git Flow
 alias gffs='git pull origin develop && git flow feature start $1'
@@ -36,6 +33,13 @@ alias gfhs='git pull origin master && git flow hotfix start $1'
 alias gfhf='git flow hotfix finish $(git branch | grep "hotfix" | fzf | awk "{print \$2}" | sed "s/hotfix\///")'
 alias gfrs='git pull origin develop && git flow release start $1'
 alias gfrf='git pull origin master && git pull origin develop && git flow release finish $(git branch | grep "release" | fzf | awk "{print \$2}" | sed "s/release\///")'
+
+# NPM
+alias npm-run='npm-run'
+
+# Chrome
+alias chrome-history='chrome-history'
+alias chrome-bookmark='chrome-bookmark'
 
 # docker
 alias lzd='lazydocker'

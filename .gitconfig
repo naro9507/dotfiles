@@ -23,5 +23,6 @@
 
 [alias]
     logg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
+	commit = commit -m
     amend = commit --amend
     branch-d = !git branch -D $(git branch | fzf)

@@ -78,7 +78,7 @@ cask_formulas=(
     google-japanese-ime
     visual-studio-code
     discord
-    graphiql
+    graphql-playground
     zoom
     docker
     iterm2

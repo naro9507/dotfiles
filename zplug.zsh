@@ -6,9 +6,6 @@ fi
 
 source ~/.zplug/init.zsh
 
-# fzfを使った拡張関数
-zplug "mollifier/anyframe"
-
 # gitルートにcd
 zplug "mollifier/cd-gitroot"
 
@@ -29,6 +26,9 @@ zplug "zsh-users/zsh-autosuggestions"
 
 # Prompt Theme powerlevel10k
 zplug "romkatv/powerlevel10k", as:theme, depth:1
+
+# Gitのadd, resetをfzfを使ってやりやすくなるプラグイン
+zplug "bigH/git-fuzzy", as:command, use:"bin/git-fuzzy"
 
 # 自身をプラグインとして管理する
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'

@@ -37,5 +37,28 @@
     "vscode-kubernetes.minikube-path.mac": "/Users/ishikawanaohiro/.vs-kubernetes/tools/minikube/darwin-arm64/minikube",
     "vscode-kubernetes.kubectl-path.mac": "/Users/ishikawanaohiro/.vs-kubernetes/tools/kubectl/kubectl"
   },
-  "redhat.telemetry.enabled": true
+  "redhat.telemetry.enabled": true,
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "resily-new-local",
+      "database": "resily",
+      "username": "postgres",
+      "password": "password"
+    },
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "one-on-one-local",
+      "database": "one-on-one",
+      "username": "postgres",
+      "password": "password"
+    }
+  ],
+  "window.zoomLevel": -1
 }
