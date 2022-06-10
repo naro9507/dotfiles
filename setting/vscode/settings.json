@@ -35,7 +35,8 @@
   "vs-kubernetes": {
     "vscode-kubernetes.helm-path.mac": "/Users/ishikawanaohiro/.vs-kubernetes/tools/helm/darwin-arm64/helm",
     "vscode-kubernetes.minikube-path.mac": "/Users/ishikawanaohiro/.vs-kubernetes/tools/minikube/darwin-arm64/minikube",
-    "vscode-kubernetes.kubectl-path.mac": "/Users/ishikawanaohiro/.vs-kubernetes/tools/kubectl/kubectl"
+    "vscode-kubernetes.kubectl-path.mac": "/Users/ishikawanaohiro/.vs-kubernetes/tools/kubectl/kubectl",
+    "vs-kubernetes.crd-code-completion": "enabled"
   },
   "redhat.telemetry.enabled": true,
   "sqltools.connections": [
@@ -60,5 +61,15 @@
       "password": "password"
     }
   ],
-  "window.zoomLevel": -1
+  "go.toolsManagement.autoUpdate": true,
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "gopls": { "experimentalWorkspaceModule": true },
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": ["--fast"],
+  "window.zoomLevel": -1,
+  "graphql-config.load.legacy": true,
+  "vscode-graphql.debug": true,
+  "cSpell.languageSettings": []
 }
