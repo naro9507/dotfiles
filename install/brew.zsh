@@ -60,7 +60,6 @@ formulas=(
     gibo
     kube-ps1
     docker
-    docker-compose
     lazydocker
     lazygit
     google-cloud-sdk
