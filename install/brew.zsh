@@ -59,8 +59,9 @@ formulas=(
     peco
     gibo
     kube-ps1
-    lazydocker
     docker
+    docker-compose
+    lazydocker
     lazygit
     google-cloud-sdk
     gdb
