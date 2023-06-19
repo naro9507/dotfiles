@@ -28,15 +28,22 @@ export PATH=$HOME/.anyenv/bin:$PATH
 #######################################
 # Golang Settings                     #
 #######################################
-export GOENV_ROOT=$HOME/.anyenv/envs/.goenv
+export GOENV_ROOT=$HOME/.anyenv/envs/goenv
 export PATH=$GOENV_ROOT/bin:$PATH
 export PATH=$GOROOT/bin:$PATH
 export PATH=$PATH:$GOPATH/bin
 
 #######################################
+# Ruby Settings                     #
+#######################################
+export RBENV_ROOT=$HOME/.anyenv/envs/rbenv
+export PATH=$RBENV_ROOT/bin:$PATH
+
+#######################################
 # Node Settings                     #
 #######################################
-export PATH=$HOME/.anyenv/envs/nodenv/bin:$PATH
+export NODEENV_ROOT=$HOME/.anyenv/envs/nodenv
+export PATH=$NODEENV_ROOT/bin:$PATH
 
 export CLOUDSDK_PYTHON_SITEPACKAGES=1
 

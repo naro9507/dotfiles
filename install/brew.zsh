@@ -81,18 +81,20 @@ cask_formulas=(
     graphql-playground
     zoom
     docker
-    iterm2
     firefox
     notion
     karabiner-elements
     alfred
     spotify
     monitorcontrol
-    shiftit
     wireshark
     1password
     kindle
-    biscuit
+    wondershare-filmora
+    spectacle
+    goland
+    krisp
+    wezterm
 )
 
 brew upgrade

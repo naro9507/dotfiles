@@ -3,23 +3,26 @@
   "editor.bracketPairColorization.enabled": true,
   "workbench.colorTheme": "FlatUI Dark",
   "workbench.iconTheme": "material-icon-theme",
-  "tabnine.experimentalAutoImports": true,
-  "GitLive.Issue tracker integration": "Disabled",
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.runtime": "/Users/ishikawanaohiro/.anyenv/envs/nodenv/shims/node",
   "editor.formatOnSave": true,
-  "[yaml,yml]": {
+  "[markdown]": {
     "editor.formatOnSave": false
   },
+  "[yaml]": {
+    "editor.formatOnSave": false
+  },
+  /**
   "[c]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
   },
+  **/
   "gitlens.advanced.messages": {
     "suppressGitMissingWarning": true
   },
   "files.autoGuessEncoding": true,
   "diffEditor.ignoreTrimWhitespace": false,
-  "files.useExperimentalFileWatcher": true,
   "files.exclude": {
     "/.git": true,
     "/.DS_Store": true,
@@ -32,6 +35,7 @@
   "files.watcherExclude": {
     "/node_modules/": true
   },
+  /**
   "vs-kubernetes": {
     "vscode-kubernetes.helm-path.mac": "/Users/ishikawanaohiro/.vs-kubernetes/tools/helm/darwin-arm64/helm",
     "vscode-kubernetes.minikube-path.mac": "/Users/ishikawanaohiro/.vs-kubernetes/tools/minikube/darwin-arm64/minikube",
@@ -39,6 +43,7 @@
     "vs-kubernetes.crd-code-completion": "enabled"
   },
   "redhat.telemetry.enabled": true,
+  **/
   "sqltools.connections": [
     {
       "previewLimit": 50,
@@ -61,15 +66,54 @@
       "password": "password"
     }
   ],
+  // "sql-formatter.uppercase": true,
+
   "go.toolsManagement.autoUpdate": true,
   "[go]": {
     "editor.defaultFormatter": "golang.go"
   },
-  "gopls": { "experimentalWorkspaceModule": true },
+  // "gopls": { "experimentalWorkspaceModule": true },
   "go.lintTool": "golangci-lint",
   "go.lintFlags": ["--fast"],
-  "window.zoomLevel": -1,
+  "go.buildTags": "debug",
+  "go.toolsEnvVars": {
+    "TEST_DATABASE_ADMIN_USER": "postgres",
+    "TEST_DATABASE_ADMIN_USER_PASSWORD": "password",
+    "TEST_DATABASE_USER": "app_user",
+    "TEST_DATABASE_PASSWORD": "n8QzTZFg9W32-DtVAtuhswA2Wp_YxvYK",
+    "TEST_DATABASE_HOST": "localhost",
+    "TEST_DATABASE_PORT": "5433",
+    "TEST_DATABASE_DATABASE": "resily",
+    "TEST_DATABASE_DSN": "postgres://app_user:n8QzTZFg9W32-DtVAtuhswA2Wp_YxvYK@localhost:5433/resily?sslmode=disable",
+    "TEST_DATABASE_ADMIN_DSN": "postgres://postgres:password@localhost:5433/resily?sslmode=disable"
+  },
+
   "graphql-config.load.legacy": true,
   "vscode-graphql.debug": true,
-  "cSpell.languageSettings": []
+  "cSpell.languageSettings": [],
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "liveshare.allowGuestDebugControl": true,
+  "liveshare.allowGuestTaskControl": true,
+  "liveshare.allowInvites": "all",
+  "liveshare.languages.allowGuestCommandControl": true,
+  "liveshare.alwaysFollowHost": true,
+  "liveshare.anonymousGuestApproval": "accept",
+  /**
+  "debug.javascript.autoAttachFilter": "always",
+  "debug.javascript.usePreviewAutoAttach": false,
+  "debug.javascript.defaultRuntimeExecutable": {
+    "node": "/Users/ishikawanaohiro/.anyenv/envs/nodenv/shims/node"
+  },
+  **/
+  "githubPullRequests.pullBranch": "never",
+  "editor.stickyScroll.enabled": true,
+  "editor.fontLigatures": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "liveshare.presence": true,
+  "errorLens.enabledDiagnosticLevels": ["error", "warning", "hint"],
+  "editor.inlineSuggest.enabled": true,
+  "CodeGPT.query.language": "Japanese",
+  "errorLens.excludeBySource": ["ts(2304)", "compiler(BrokenImport)"],
+  "git.openRepositoryInParentFolders": "always",
+  "jest.autoRun": "off"
 }
