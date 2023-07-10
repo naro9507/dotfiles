@@ -115,5 +115,11 @@
   "CodeGPT.query.language": "Japanese",
   "errorLens.excludeBySource": ["ts(2304)", "compiler(BrokenImport)"],
   "git.openRepositoryInParentFolders": "always",
-  "jest.autoRun": "off"
+  "jest.autoRun": "off",
+  "tabnine.experimentalAutoImports": true,
+  "GitLive.Special branches": "main|master|trunk|dev|develop|qa|test|release[-/].*",
+  "GitLive.Issue tracker integration": "Disabled",
+  "redhat.telemetry.enabled": true,
+  "git.autofetch": true,
+  "git.confirmSync": false
 }

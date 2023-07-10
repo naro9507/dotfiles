@@ -53,3 +53,7 @@ export PATH=$NODEENV_ROOT/bin:$PATH
 
 export CLOUDSDK_PYTHON_SITEPACKAGES=1
 
+#######################################
+# DOCKER                              #
+#######################################
+export DOCKER_HOST=unix://~/Library/Containers/com.docker.docker/Data/docker.raw.sock
