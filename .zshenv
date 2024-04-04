@@ -8,7 +8,7 @@
 export LANG=ja_JP.UTF-8
 export LC_ALL=ja_JP.UTF-8
 export TZ=Asia/Tokyo
-
+export GPG_TTY=$TTY
 
 ########################################
 # History                              #
@@ -46,6 +46,12 @@ export RBENV_ROOT=$HOME/.anyenv/envs/rbenv
 export PATH=$RBENV_ROOT/bin:$PATH
 
 #######################################
+# Gem Settings                     #
+#######################################
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH
+
+#######################################
 # Node Settings                     #
 #######################################
 export NODEENV_ROOT=$HOME/.anyenv/envs/nodenv
@@ -54,6 +60,6 @@ export PATH=$NODEENV_ROOT/bin:$PATH
 export CLOUDSDK_PYTHON_SITEPACKAGES=1
 
 #######################################
-# DOCKER                              #
+# Android Studio                      #
 #######################################
-export DOCKER_HOST=unix://~/Library/Containers/com.docker.docker/Data/docker.raw.sock
+export PATH=$HOME/Library/Android/sdk/platform-tools:$PATH
