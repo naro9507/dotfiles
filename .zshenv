@@ -63,3 +63,11 @@ export CLOUDSDK_PYTHON_SITEPACKAGES=1
 # Android Studio                      #
 #######################################
 export PATH=$HOME/Library/Android/sdk/platform-tools:$PATH
+export DOCKER_HOST=unix:///var/run/docker.sock
+
+#######################################
+# GRADLE                              #
+#######################################
+export GRADLE_HOME=/usr/local/gradle/bin
+export GRADLE_USER_HOME=$GRADLE_HOME
+export PATH=$PATH:$GRADLE_HOME/bin

@@ -25,6 +25,14 @@
 	trustExitCode = true
 
 [alias]
+	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
     logg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
 	commit = commit -m
     amend = commit --amend
+	# ブランチ移動せずに指定したブランチを最新にする
+	update = "!f () { if [ -z '$(git diff HEAD..$1)' ]; then git pull origin; else git branch -D $1; git fetch origin $1:$1; git branch -u origin/$1 $1; fi; }; f"
+	pushf = push --force-with-lease --force-if-includes
+	cz = czg
+
+[rerere]
+	enabled = true

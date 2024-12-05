@@ -29,6 +29,7 @@ files=(
   .gitignore_global
   .zshrc
   .zshenv
+  .czrc
   aliases.zsh
   zplug.zsh
   functions.zsh
