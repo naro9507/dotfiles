@@ -45,12 +45,6 @@ else
   exit 0
 fi
 
-# theme
-# if [[ ! -d ~/powerlevel10k ]];then
-#   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-# fi
-# ZSH_THEME="powerlevel10k/powerlevel10k"
-
 pwd=$(pwd)
 # symbolic link for vscode settings.json
 ln -sfv ${pwd}/setting/vscode/settings.json ${HOME}/Library/Application\ Support/Code/User/settings.json
