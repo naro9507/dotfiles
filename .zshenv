@@ -71,3 +71,8 @@ export DOCKER_HOST=unix:///var/run/docker.sock
 export GRADLE_HOME=/usr/local/gradle/bin
 export GRADLE_USER_HOME=$GRADLE_HOME
 export PATH=$PATH:$GRADLE_HOME/bin
+
+#######################################
+# Python                              #
+#######################################
+export PATH=$HOME/pyenv/bin/python3:$PATH

@@ -3,12 +3,16 @@
 # Please adapt and uncomment the following lines:
 	name = naro9507
 	email = naohiro.7.vfh@gmail.com
+	signingkey = ~/.ssh/github_ed25519.pub
 
 [core]
 	excludesfile = ~/.gitignore_global
 
 [fetch]
     prune = true
+
+[commit]
+	gpgsign = true
 
 [pull]
 	rebase = true
@@ -36,3 +40,5 @@
 
 [rerere]
 	enabled = true
+[gpg]
+	format = ssh
