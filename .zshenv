@@ -1,7 +1,5 @@
 #!/bin/zsh
 
-# TODO:
-
 #######################################
 # General Settings                    #
 #######################################
@@ -24,55 +22,3 @@ SAVEHIST=10000
 # Docker                              #
 ########################################
 export DOCKER_COMFIG=$HOME/.docker
-
-
-#######################################
-# anyenv                              #
-#######################################
-export PATH=$HOME/.anyenv/bin:$PATH
-
-#######################################
-# Golang Settings                     #
-#######################################
-export GOENV_ROOT=$HOME/.anyenv/envs/goenv
-export PATH=$GOENV_ROOT/bin:$PATH
-export PATH=$GOROOT/bin:$PATH
-export PATH=$PATH:$GOPATH/bin
-
-#######################################
-# Ruby Settings                     #
-#######################################
-export RBENV_ROOT=$HOME/.anyenv/envs/rbenv
-export PATH=$RBENV_ROOT/bin:$PATH
-
-#######################################
-# Gem Settings                     #
-#######################################
-export GEM_HOME=$HOME/.gem
-export PATH=$GEM_HOME/bin:$PATH
-
-#######################################
-# Node Settings                     #
-#######################################
-export NODEENV_ROOT=$HOME/.anyenv/envs/nodenv
-export PATH=$NODEENV_ROOT/bin:$PATH
-
-export CLOUDSDK_PYTHON_SITEPACKAGES=1
-
-#######################################
-# Android Studio                      #
-#######################################
-export PATH=$HOME/Library/Android/sdk/platform-tools:$PATH
-export DOCKER_HOST=unix:///var/run/docker.sock
-
-#######################################
-# GRADLE                              #
-#######################################
-export GRADLE_HOME=/usr/local/gradle/bin
-export GRADLE_USER_HOME=$GRADLE_HOME
-export PATH=$PATH:$GRADLE_HOME/bin
-
-#######################################
-# Python                              #
-#######################################
-export PATH=$HOME/pyenv/bin/python3:$PATH
