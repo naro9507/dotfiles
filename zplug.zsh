@@ -30,6 +30,13 @@ zplug "romkatv/powerlevel10k", as:theme, depth:1
 # Gitのadd, resetをfzfを使ってやりやすくなるプラグイン
 zplug "bigH/git-fuzzy", as:command, use:"bin/git-fuzzy"
 
+
+# 履歴の検索機能
+zplug "zsh-users/zsh-history-substring-search", as: plugin
+
+# コマンドのシンタックスハイライト（存在するコマンドなら緑色で表示する）
+zplug "zsh-users/zsh-syntax-highlighting"
+
 # 自身をプラグインとして管理する
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
