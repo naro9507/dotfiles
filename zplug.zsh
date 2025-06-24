@@ -40,6 +40,9 @@ zplug "zsh-users/zsh-syntax-highlighting"
 # 自身をプラグインとして管理する
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
+# gitの補完を強化するプラグイン
+zplug 'wfxr/forgit'
+
 # インストールされてないプラグインをインストール
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
