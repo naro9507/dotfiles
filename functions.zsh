@@ -2,10 +2,10 @@
 path-append ()  { path-remove $1; export PATH="$PATH:$1"; }
 path-prepend () { path-remove $1; export PATH="$1:$PATH"; }
 path-remove ()  { export PATH=`echo -n $PATH | awk -v RS=: -v ORS=: '$0 != "'$1'"' | sed 's/:$//'`; }
-fzf-history() { print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g') }
+fzf-history() { print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf --layout=reverse +s --tac | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g') }
 emoji() {
     emojis=$(curl -sSL 'https://git.io/JXXO7')
-    selected_emoji=$(echo $emojis | fzf | awk '{print $1}')
+    selected_emoji=$(echo $emojis | fzf --layout=reverse | awk '{print $1}')
     echo $selected_emoji
 }
 
@@ -18,7 +18,7 @@ git-current-branch-name(){
 fzf-git-branch-local() {
     git branch --color=always --sort=-committerdate |
         grep -v HEAD |
-        fzf --height 50% --ansi --no-multi --preview-window right:65% \
+        fzf --layout=reverse --height 50% --ansi --no-multi --preview-window right:65% \
             --preview 'git log -n 50 --color=always --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed "s/.* //" <<< {})' |
         sed "s/.* //"
 }
@@ -26,7 +26,7 @@ fzf-git-branch-local() {
 fzf-git-multi-branch-local() {
     git branch --color=always --sort=-committerdate |
         grep -v HEAD |
-        fzf --height 50% --ansi --multi --preview-window right:65% \
+        fzf --layout=reverse --height 50% --ansi --multi --preview-window right:65% \
             --preview 'git log -n 50 --color=always --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed "s/.* //" <<< {})' |
         sed "s/.* //"
 }
@@ -36,7 +36,7 @@ fzf-git-branch-all() {
 
     git branch --color=always --all --sort=-committerdate |
         grep -v HEAD |
-        fzf --height 50% --ansi --no-multi --preview-window right:65% \
+        fzf --layout=reverse --height 50% --ansi --no-multi --preview-window right:65% \
             --preview 'git log -n 50 --color=always --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed "s/.* //" <<< {})' |
         sed "s/.* //"
 }
@@ -109,7 +109,7 @@ npm-run() {
     local file_path
     local script
 
-    file_path=$(find . -name package.json -maxdepth 5 2> /dev/null| grep -v node_modules | fzf -m | awk '{print $1}')
+    file_path=$(find . -name package.json -maxdepth 5 2> /dev/null| grep -v node_modules | fzf --layout=reverse -m | awk '{print $1}')
     script=$(cat "$file_path" | jq -r '.scripts | keys[] ' | sort | fzf)
     npm run $(echo "$script") --prefix $(dirname "$file_path")
 
@@ -134,7 +134,7 @@ chrome-history() {
         "select substr(title, 1, $cols), url
         from urls order by last_visit_time desc" |
     awk -F $sep '{printf "%-'$cols's  \x1b[36m%s\x1b[m\n", $1, $2}' |
-    fzf --ansi --multi | sed 's#.*\(https*://\)#\1#' | xargs $open > /dev/null 2> /dev/null
+    fzf --layout=reverse --ansi --multi | sed 's#.*\(https*://\)#\1#' | xargs $open > /dev/null 2> /dev/null
 }
 
 chrome-bookmark() {
@@ -146,7 +146,7 @@ chrome-bookmark() {
 
     jq -r "$jq_script" < "$bookmarks_path" \
         | sed -E $'s/(.*)\t(.*)/\\1\t\x1b[36m\\2\x1b[m/g' \
-        | fzf --ansi \
+        | fzf --layout=reverse --ansi \
         | cut -d$'\t' -f2 \
         | xargs open
 }

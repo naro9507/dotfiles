@@ -13,7 +13,7 @@ alias la="ls -laG"
 # Git
 alias lzg='lazygit'
 alias cb='git-current-branch-name'
-alias kusa='curl https://github-contributions-api.deno.dev/$(git config user.name).term'
+alias kusa='curl https://github-contributions-api.deno.dev/naro9507.term'
 alias gfp='git push --force-with-lease origin'
 alias gbrl='fzf-git-branch-delete-local'
 alias gbra='git fetch --prune ( git fetch -p )'
@@ -28,11 +28,11 @@ alias cdgr='cd-gitroot'
 
 # Git Flow
 alias gffs='git pull origin develop && git flow feature start $1'
-alias gfff='git flow feature finish $(git branch | grep "feature" | fzf | awk "{print \$2}") | sed "s/feature\///")'
+alias gfff='git flow feature finish $(git branch | grep "feature" | fzf --layout=reverse | awk "{print \$2}") | sed "s/feature\///")'
 alias gfhs='git pull origin master && git flow hotfix start $1'
-alias gfhf='git flow hotfix finish $(git branch | grep "hotfix" | fzf | awk "{print \$2}" | sed "s/hotfix\///")'
+alias gfhf='git flow hotfix finish $(git branch | grep "hotfix" | fzf --layout=reverse | awk "{print \$2}" | sed "s/hotfix\///")'
 alias gfrs='git pull origin develop && git flow release start $1'
-alias gfrf='git pull origin master && git pull origin develop && git flow release finish $(git branch | grep "release" | fzf | awk "{print \$2}" | sed "s/release\///")'
+alias gfrf='git pull origin master && git pull origin develop && git flow release finish $(git branch | grep "release" | fzf --layout=reverse | awk "{print \$2}" | sed "s/release\///")'
 
 # NPM
 alias npm-run='npm-run'
@@ -46,7 +46,7 @@ alias lzd='lazydocker'
 alias dcu='docker compose up -d $@'
 
 # gcloud
-alias gcpp='gcloud config set project $(gcloud projects list | fzf | awk "{print \$1}")'
+alias gcpp='gcloud config set project $(gcloud projects list | fzf --layout=reverse | awk "{print \$1}")'
 
 # base64
 alias encode='function __encode(){ echo -n "$1" | base64 }; __encode'
