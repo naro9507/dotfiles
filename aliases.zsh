@@ -4,6 +4,7 @@ alias history='fzf-history'
 alias calc='function __calc(){ echo "$1" | bc }; __calc'
 alias gunzip='gzip -dv $(find $HOME/Downloads -name \*.gz -or -name \*.gzip | fzf) | echo '
 alias pkill='kill -9 $(lsof -t -i :$1)'
+alias load_secrets='if [ -f $HOME/.zshrc_secrets_local ]; then source $HOME/.zshrc_secrets_local; fi'
 
 # ls（カラー表示）
 alias ls="ls -G"
