@@ -28,3 +28,7 @@ vendor/
 
 # Claude Code
 **/.claude/**/*
+
+# Local enviroment variables
+.zshenv_local
+.zshenv_secrets_local
