@@ -3,7 +3,7 @@ alias reload='exec ${SHELL} -l'
 alias history='fzf-history'
 alias calc='function __calc(){ echo "$1" | bc }; __calc'
 alias gunzip='gzip -dv $(find $HOME/Downloads -name \*.gz -or -name \*.gzip | fzf) | echo '
-alias pkill='kill -9 $(lsof -t -i :$1)'
+alias pkill='kill -9 $(lsof -t -i [:$1])'
 alias load_secrets='if [ -f $HOME/.zshenv_secrets_local ]; then source $HOME/.zshenv_secrets_local; fi'
 
 # ls（カラー表示）
@@ -26,6 +26,8 @@ alias repo='ghq list -p'
 alias repog='ghq get $1'
 alias repoc='cd "$(repo | fzf)"'
 alias cdgr='cd-gitroot'
+# GitHub
+alias ghpr='gh pr view --web'
 
 # Git Flow
 alias gffs='git pull origin develop && git flow feature start $1'

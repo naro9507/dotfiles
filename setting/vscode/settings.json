@@ -117,7 +117,6 @@
   "git.openRepositoryInParentFolders": "always",
   "jest.autoRun": "off",
   "tabnine.experimentalAutoImports": true,
-  "GitLive.Special branches": "main|master|trunk|dev|develop|qa|test|release[-/].*",
   "GitLive.Issue tracker integration": "Disabled",
   "redhat.telemetry.enabled": true,
   "git.autofetch": true,

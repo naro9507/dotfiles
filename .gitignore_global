@@ -32,3 +32,6 @@ vendor/
 # Local enviroment variables
 .zshenv_local
 .zshenv_secrets_local
+
+# Serena
+**/.serena/**/*
