@@ -22,12 +22,17 @@ alias gclone='ghq get $1'
 alias gbcl='fzf-git-checkout-local'
 alias gbcr='fzf-git-checkout'
 alias gsl='git stash --list'
+alias gpl='git pull origin $(cb)'
 alias repo='ghq list -p'
 alias repog='ghq get $1'
 alias repoc='cd "$(repo | fzf)"'
 alias cdgr='cd-gitroot'
+alias gadd='fzf-git-add'
 # GitHub
 alias ghpr='gh pr view --web'
+alias ghprc='gh pr checkout $(gh pr list | fzf --layout=reverse | awk "{print \$1}") --web'
+alias ghprs='gh pr list --web'
+alias ghrepo='gh repo view --web'
 
 # Git Flow
 alias gffs='git pull origin develop && git flow feature start $1'

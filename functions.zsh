@@ -104,6 +104,37 @@ fzf-git-stash-pop() {
 fzf-git-stash-drop() {
 }
 
+## Add・Reset
+fzf-git-add() {
+    local files
+
+    files=$(git diff --name-only HEAD |
+    fzf --layout=reverse --height 50% --ansi --multi --preview-window right:65% \
+        --preview 'git diff --color=always HEAD -- {}')
+
+    if [[ "$files" = "" ]]; then
+        echo "No files selected."
+        return
+    fi
+
+    git add $(echo $files | sed "s/ /\\n/g")
+}
+
+fzf-git-reset() {
+    local files
+
+    files=$(git diff --name-only HEAD |
+    fzf --layout=reverse --height 50% --ansi --multi --preview-window right:65% \
+        --preview 'git diff --color=always HEAD -- {}')
+
+    if [[ "$files" = "" ]]; then
+        echo "No files selected."
+        return
+    fi
+
+    git reset $(echo $files | sed "s/ /\\n/g")
+}
+
 ## NPM
 npm-run() {
     local file_path
