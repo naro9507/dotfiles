@@ -104,35 +104,29 @@ fzf-git-stash-pop() {
 fzf-git-stash-drop() {
 }
 
-## Add・Reset
-fzf-git-add() {
-    local files
-
-    files=$(git diff --name-only HEAD |
-    fzf --layout=reverse --height 50% --ansi --multi --preview-window right:65% \
-        --preview 'git diff --color=always HEAD -- {}')
-
-    if [[ "$files" = "" ]]; then
-        echo "No files selected."
-        return
-    fi
-
-    git add $(echo $files | sed "s/ /\\n/g")
-}
-
-fzf-git-reset() {
-    local files
-
-    files=$(git diff --name-only HEAD |
-    fzf --layout=reverse --height 50% --ansi --multi --preview-window right:65% \
-        --preview 'git diff --color=always HEAD -- {}')
-
-    if [[ "$files" = "" ]]; then
-        echo "No files selected."
-        return
-    fi
-
-    git reset $(echo $files | sed "s/ /\\n/g")
+## Add・Reset・Discard
+fzf-git-status() {
+  git -c core.quotePath=false status --porcelain=v1 |
+  fzf --ansi --no-sort --tiebreak=index \
+    --preview '
+      bash -lc '"'"'
+        line="$1"
+        xy="${line:0:2}"
+        tail="${line:3}"
+        # R/C は "old -> new" の new を採用
+        if [[ "$xy" =~ ^[RC] ]]; then
+          path="${tail##* -> }"
+        else
+          path="$tail"
+        fi
+        git -c color.ui=always diff HEAD -- "$path"
+      '"'"' _ {}
+    ' \
+    --bind 'enter:execute-silent(git add -- "$(echo {} | cut -c4-)")+reload-sync(git -c core.quotePath=false status --porcelain=v1)' \
+    --bind 'x:execute-silent(git restore --staged -- "$(echo {} | cut -c4-)")+reload-sync(git -c core.quotePath=false status --porcelain=v1)' \
+    --bind 'd:execute-silent(git restore -- "$(echo {} | cut -c4-)")+reload-sync(git -c core.quotePath=false status --porcelain=v1)' \
+    --header "Enter: add | X: unstage | D: discard changes | Esc: quit" \
+    --preview-window=right,65%,wrap
 }
 
 ## NPM
