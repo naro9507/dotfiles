@@ -28,6 +28,7 @@ alias repog='ghq get $1'
 alias repoc='cd "$(repo | fzf)"'
 alias cdgr='cd-gitroot'
 alias gs='fzf-git-status'
+alias gg='git-grep'
 # GitHub
 alias ghpr='gh pr view --web'
 alias ghprc='gh pr checkout $(gh pr list | fzf --layout=reverse | awk "{print \$1}") --web'

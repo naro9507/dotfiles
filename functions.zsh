@@ -10,6 +10,11 @@ emoji() {
 }
 
 # Git
+## grep
+git-grep() {
+    rg --json -C 2 $1 | delta
+}
+
 ## branch
 git-current-branch-name(){
   git branch | grep '^\*' | sed 's/^\* *//'
@@ -175,3 +180,26 @@ chrome-bookmark() {
         | cut -d$'\t' -f2 \
         | xargs open
 }
+
+# JWT
+decode-jwt() {
+    local jwt="$1"
+
+    if [[ -z "$jwt" ]]; then
+        echo "Usage: decode-jwt <JWT_TOKEN>"
+        return 1
+    fi
+
+    # JWTのペイロード部分を抽出
+    local payload=$(echo -n "$jwt" | cut -d "." -f2)
+
+    # base64パディングを補完（4の倍数にする）
+    local padding=$((4 - ${#payload} % 4))
+    if [[ $padding -ne 4 ]]; then
+        payload="${payload}$(printf '%*s' $padding '' | tr ' ' '=')"
+    fi
+
+    # base64デコードしてjqで整形
+    echo -n "$payload" | base64 -d | jq
+}
+
