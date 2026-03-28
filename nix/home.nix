@@ -22,7 +22,6 @@
     lazysql
     mise
     terraform
-    (callPackage ./pkgs/czg.nix { })
   ];
 
   programs.starship.enable = true;
