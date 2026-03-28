@@ -1,0 +1,131 @@
+# Starship Prompt Configuration
+# Catppuccin Mocha inspired palette with Powerline separators
+
+# Performance
+scan_timeout = 30
+command_timeout = 500
+add_newline = true
+
+# 2-line prompt format
+# Line 1: directory → git → language/tools → cloud/infra → duration ... time
+# Line 2: input cursor
+format = """
+[](fg:surface0)\
+$directory\
+[](fg:surface0 bg:surface1)\
+$git_branch\
+$git_status\
+[](fg:surface1 bg:surface2)\
+$nodejs\
+$package\
+[](fg:surface2 bg:overlay0)\
+$aws\
+$gcloud\
+$docker_context\
+$kubernetes\
+$terraform\
+[](fg:overlay0)\
+$cmd_duration\
+$fill\
+$time\
+$line_break\
+$character"""
+
+palette = "catppuccin_mocha"
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo  = "#f2cdcd"
+pink      = "#f5c2e7"
+mauve     = "#cba6f7"
+red       = "#f38ba8"
+maroon    = "#eba0ac"
+peach     = "#fab387"
+yellow    = "#f9e2af"
+green     = "#a6e3a1"
+teal      = "#94e2d5"
+sky       = "#89dceb"
+sapphire  = "#74c7ec"
+blue      = "#89b4fa"
+lavender  = "#b4befe"
+text      = "#cdd6f4"
+subtext1  = "#bac2de"
+subtext0  = "#a6adc8"
+overlay2  = "#9399b2"
+overlay1  = "#7f849c"
+overlay0  = "#6c7086"
+surface2  = "#585b70"
+surface1  = "#45475a"
+surface0  = "#313244"
+base      = "#1e1e2e"
+mantle    = "#181825"
+crust     = "#11111b"
+
+[directory]
+format = "[ $path ]($style)"
+style = "fg:text bg:surface0"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+format = "[ $symbol$branch ]($style)"
+style = "fg:text bg:surface1"
+symbol = " "
+
+[git_status]
+format = "[$all_status$ahead_behind ]($style)"
+style = "fg:text bg:surface1"
+
+[nodejs]
+format = "[ $symbol$version ]($style)"
+style = "fg:text bg:surface2"
+symbol = " "
+
+[package]
+format = "[ $symbol$version ]($style)"
+style = "fg:text bg:surface2"
+symbol = "󰏗 "
+
+[aws]
+format = "[ $symbol$profile(/$region) ]($style)"
+style = "fg:text bg:overlay0"
+symbol = " "
+
+[gcloud]
+format = "[ $symbol$project ]($style)"
+style = "fg:text bg:overlay0"
+symbol = " "
+
+[docker_context]
+format = "[ $symbol$context ]($style)"
+style = "fg:text bg:overlay0"
+symbol = " "
+
+[kubernetes]
+format = "[ $symbol$context(/$namespace) ]($style)"
+style = "fg:text bg:overlay0"
+symbol = "☸ "
+disabled = false
+
+[terraform]
+format = "[ $symbol$workspace ]($style)"
+style = "fg:text bg:overlay0"
+symbol = "💠 "
+
+[cmd_duration]
+format = "[ 󰔟 $duration ]($style)"
+style = "fg:yellow"
+min_time = 2_000
+
+[fill]
+symbol = " "
+
+[time]
+format = "[ $time ]($style)"
+style = "fg:subtext0"
+disabled = false
+time_format = "%H:%M"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"

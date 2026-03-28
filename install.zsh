@@ -47,6 +47,10 @@ else
   exit 0
 fi
 
+# Starship prompt config
+mkdir -p ${HOME}/.config
+ln -sfv ${dir}/starship.toml ${HOME}/.config/starship.toml
+
 pwd=$(pwd)
 # symbolic link for vscode settings.json
 ln -sfv ${pwd}/setting/vscode/settings.json ${HOME}/Library/Application\ Support/Code/User/settings.json
