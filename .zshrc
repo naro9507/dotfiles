@@ -1,5 +1,10 @@
 #!/bin/zsh
 
+# Nix
+if [ -e ${HOME}/.nix-profile/etc/profile.d/nix.sh ]; then
+  . ${HOME}/.nix-profile/etc/profile.d/nix.sh
+fi
+
 # .zshenv_local
 if [ -f ${HOME}/.zshenv_local ]; then
   source ${HOME}/.zshenv_local
