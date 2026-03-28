@@ -24,8 +24,8 @@ zplug "chrissicool/zsh-256color"
 # 過去に入力したコマンドの履歴が灰色のサジェストで出る
 zplug "zsh-users/zsh-autosuggestions"
 
-# Prompt Theme powerlevel10k
-zplug "romkatv/powerlevel10k", as:theme, depth:1
+# Prompt Theme powerlevel10k (replaced by starship)
+# zplug "romkatv/powerlevel10k", as:theme, depth:1
 
 # Gitのadd, resetをfzfを使ってやりやすくなるプラグイン
 zplug "bigH/git-fuzzy", as:command, use:"bin/git-fuzzy"
